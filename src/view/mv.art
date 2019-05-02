@@ -1,0 +1,62 @@
+
+<div class="mvPage">
+    <div class="mv-top">
+        <h3>MV</h3>
+        <ul>
+            <li class="active">精选</li>
+            <li>排行</li>
+            <li>全部</li>
+        </ul>
+    </div>
+    <div class="mv-select">
+        <div class="mv-select-content">
+            <div class="mv-cont">
+                <div class="title">
+                    <span><i></i>网易出品</span>
+                    <span class="more">更多></span>
+                </div>
+                <div class="mv-video clearfix">
+                <% for(var i= 0; i< mvPerContent.length; i++){ %>
+                    <li data-id= "<%= mvPerContent[i].id %>">
+                        <div class="img-div">
+                            <img src="<%= mvPerContent[i].picUrl %>" alt="">
+                            <p><span><%= mvPerContent[i].playCount %></span></p>
+                            <div class="img-tit"><%= mvPerContent[i].copywriter %></div>
+                        </div>
+                        <div class="div-title"><%= mvPerContent[i].name %></div>
+                        <p class="name"><%= mvPerContent[i].artists %></p>
+                    </li>
+                <% } %>
+                </div>
+            </div>
+            <div class="mv-cont">
+                <div class="title">
+                    <span><i></i>最新MV</span>
+                    <ul class="clearfix">
+                        <li class="active"><span>内地</span></li>
+                        <li><span>港台</span></li>
+                        <li><span>欧美</span></li>
+                        <li><span>韩国</span></li>
+                        <li><span>日本</span></li>
+                    </ul>
+                    <span class="more">更多></span>
+                </div>
+                <div class="mv-video clearfix">
+                <% for(var i= 0; i< mvNewContent.length; i++){ %>
+                    <li data-id="<%= mvNewContent[i].id %>">
+                        <div class="img-div">
+                            <img src="<%= mvNewContent[i].cover %>" alt="">
+                            <p><span><%= mvNewContent[i].playCount %></span></p>
+                            <div class="img-tit"><%=  mvNewContent[i].briefDesc %></div>
+                        </div>
+                        <div class="div-title"><%= mvNewContent[i].name %></div>
+                        <p class="name"><%= mvNewContent[i].artists %></p>
+                    </li>
+                 <% } %>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>

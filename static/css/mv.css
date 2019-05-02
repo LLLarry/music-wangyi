@@ -1,0 +1,146 @@
+
+		.mvPage {
+			width: 100%;
+			height: 100%;
+		}
+		.mvPage .mv-top {
+			height: 63px;
+			padding-top: 14px;
+			margin: 0 28px;
+			border-bottom: 1px solid #E4E4E7;
+		}
+		.mvPage .mv-top h3 {
+			font-weight: 400;
+			font-size: 12px;
+			color: #666;
+			height: 24px;
+			line-height: 24px;
+		}
+		.mvPage .mv-top ul {
+			height: 38px;
+			line-height: 38px;
+		} 
+		.mvPage .mv-top ul li {
+			float: left;
+			margin-right: 24px;
+			font-size: 14px;
+		}
+		.mvPage .mv-top ul li.active {
+			color: #C62E2E;
+			border-bottom: 2px solid #C62E2E;
+		}
+		.mvPage .mv-select {
+			width: 100%;
+			height: 763px;
+			/*background-color: pink;*/
+			overflow-y: auto;
+		}
+		.mvPage .mv-select .mv-select-content {
+			/*width: 990px;*/
+			width: 58%;
+			margin: 0 auto;
+		}
+		.mvPage .mv-select .mv-cont {
+			margin-top: 17px;
+		}
+		.mvPage .mv-select .mv-cont .title {
+			height: 37px;
+			line-height: 37px;
+			border-bottom: 1px solid #EFEFF2;
+			position: relative;
+		}
+		.mvPage .mv-select .mv-cont .title ul{
+			position: absolute;
+			left: 20%;
+			top: 0px;
+			height: 100%;
+		}
+		.mvPage .mv-select .mv-cont .title ul li {
+			float: left;
+		}
+		.mvPage .mv-select .mv-cont .title ul li.active span {
+			color: #000;
+		}
+		.mvPage .mv-select .mv-cont .title ul li span{
+			padding: 0 12px;
+			border-right: 1px solid #E1E1E2;
+			color: #999;
+			font-size: 12px;
+		}
+		.mvPage .mv-select .mv-cont .title ul li:last-child{
+			border-right: none;
+		}
+		.mvPage .mv-select .mv-cont .title span:nth-child(1){
+			font-size: 14px;
+		}
+		.mvPage .mv-select .mv-cont .title span:nth-child(1) i {
+			color: #C62E2E;
+			font-size: 20px;
+		}
+		.mvPage .mv-select .mv-cont .title .more{
+			font-size: 12px;
+			position: absolute;
+			right: 0;
+			color: #666;
+		}
+		.mvPage .mv-select .mv-cont .mv-video {
+			margin-top: 12px;
+		}
+		.mvPage .mv-select .mv-cont .mv-video li {
+			/*width: 314px;*/
+			width: 30%;
+			/*height: 177px;*/
+			float: left;
+			margin-right: 20px;
+		}
+		.mvPage .mv-select .mv-cont .mv-video li:nth-child(3n) {
+			margin-right: 0;
+		}
+		.mvPage .mv-select .mv-cont .mv-video li .img-div{
+			width: 100%;
+			height: 177px;
+			border: 1px solid #E4E4E7;
+			position: relative;
+		}
+		.mvPage .mv-select .mv-cont .mv-video li .img-div img{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		.mvPage .mv-select .mv-cont .mv-video li .img-div p {
+			font-size: 12px;
+			color: #fff;
+			padding: 0 5px;
+			height: 15px;
+			background-color: rgba(0,0,0,.1);
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.mvPage .mv-select .mv-cont .mv-video li .img-div .img-tit {
+			font-size: 12px;
+			color: #fff;
+			width: 100%;
+			height: 28px;
+			line-height: 28px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		.mvPage .mv-select .mv-cont .mv-video li .div-title {
+			height: 34px;
+			width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			line-height: 34px;
+			color: #000;
+			font-size: 14px;
+		}
+		.mvPage .mv-select .mv-cont .mv-video li .name {
+			font-size: 12px;
+			color: #999;
+		}

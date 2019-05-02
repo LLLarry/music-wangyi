@@ -1,0 +1,44 @@
+
+		<div class="recomDetail history-recomDetail">
+			<div class="find-nav">
+		        <p>发现音乐</p>
+		        <ul class="openul">
+		            <li class="active">歌曲 
+					<% if(list.length > 0){ %>
+						<span style="font-size: 10px"> <%= list.length %> </span>
+					<% }%>	
+					</li>
+		          
+		        </ul>
+		    </div>
+			<% if(list.length <= 0){ %>
+				<div class="noMusic">暂无播放记录</div>
+			<% }else {%>
+					<div class="musicMid">
+						<span class="allPlay"><i class="iconfont icon-bofang"></i>&nbsp;播放全部</span>
+						<span class="checked"><i class="iconfont icon-xuanze"></i>全部清空</span>
+					
+					</div>
+					<ul class="music-list history-ul">
+					<% for(var i=0 ; i< list.length ; i++){ %>
+						<li class="<%= i%2 == 1 ? '' : 'firstBg'  %>" data-id= "<%= list[i].id %>">
+							<span class="listIndex"><%= (i+1) < 10 ? '0' + (i+1) : (i + 1) %></span>
+							<%= list.collection %>
+							<i class="iconfont <%= tracks[i].collection ? 'icon-shoucang' : 'icon-xihuan' %> " data-song="<%= tracks[i] %>"></i>
+							<span class="name"><%= list[i].name %></span>
+							<div class="music-list-mid">
+								<i class="iconfont icon-bofang" data-songid="<%= list[i].id %>" data-time="<%= list[i].al.time %>" data-from= "<%= list[i].from %>"></i>
+							</div>
+							<span class="singer"><%= list[i].act %></span>
+							<span class="cd" data-id= "<%= list[i].al.id %>"><%= list[i].al.name %></span>
+							<span class="time"><%= list[i].al.time %></span>
+							<i class="iconfont icon-sq sq"></i>
+							<% if( list[i].mv > 0){ %>
+								<i class="iconfont icon-MV mv" data-id="<%= list[i].mv %>"></i>
+							<% } %>
+						</li>
+					<% } %>
+					</ul>
+				
+			<% } %>
+		</div>

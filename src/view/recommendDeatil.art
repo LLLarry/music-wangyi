@@ -1,0 +1,96 @@
+	
+		<div class="recomDetail">
+		<div class="recomDetail-bg">
+		<div class="background">
+        <img src="<%=recomList.coverImgUrl %>">
+    </div>
+			<p class="songList">歌单</p>
+			<div class="detailTop clearfix" >
+				<div class="detailTop-img">
+					<p><i class="iconfont icon-erji"></i><%= recomList.playCount %></p>
+					<img src="<%=recomList.coverImgUrl %>" alt="">
+				</div>
+				<div class="detailTop-mid">
+					<p class="detailTop-mid-title"><%= recomList.name%></p>
+					<div class="avatar">
+						<a href="javascript:;">
+							<img src="<%= recomList.avatarUrl%>" alt="">
+							<span class="name"><%= recomList.nickname%></span>
+						</a>
+						
+						<span class="time"><%= recomList.createTime %>创建</span>
+					</div>
+					<div class="module">
+						<ul class="clearfix">
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-wenjian"></i>
+									<span>收藏
+									<% if(recomList.subscribedCount != null){ %>
+									(<%= recomList.subscribedCount %>)</span>
+									<% } %>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-pinglun1"></i>
+									<span>评论
+									<% if(recomList.commentCount!= null ){ %>
+									(<%= recomList.commentCount %>)</span>
+									<% } %>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+								<i class="iconfont icon-fenxiang11"></i>
+									<span>分享
+									<% if(recomList.shareCount != null){ %>
+									(<%= recomList.shareCount %>)</span>
+									<% } %>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-xiazai"></i>
+									<span>下载全部</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-gengduo"></i>
+									<span>更多</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<% if(recomList.tags.length > 0){ %>
+					 <p class="lable">标签:&nbsp;
+					 <% } %>
+						 <% var tt=recomList.tags; for(var i=0; i< tt.length; i++){ %>
+							<a href="javascript:;"><%= tt[i] %></a>
+							<% if(i != tt.length-1){ %>
+									<span>/</span>
+							<% }%>
+						 <% } %>
+					</p>
+					<% if(recomList.description.length > 0){ %>
+					<p class="introduce">介绍：<span><%= recomList.description %></span></p>
+					<% } %>
+				</div>
+			</div>
+		</div>
+			<div class="musicMid">
+				<div class="musicMid-div">
+				<span class="allPlay"><i class="iconfont icon-bofang"></i>&nbsp;播放全部<span class="muisc-total">(<%= recomList.tracks.length%>)</span></span>
+				<span class="checked"><i class="iconfont icon-xuanze"></i>选择</span>
+				</div>
+				<form onsubmit="return false" >
+					<input type="text" placeholder="搜索歌单歌曲" class="recSearch">
+					<i></i>
+				</form>
+			</div>
+			<ul class="music-list">
+			</ul>
+		</div>

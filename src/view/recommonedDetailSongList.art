@@ -1,0 +1,30 @@
+
+<% if(tracks.length > 0){ %>
+    <% for(var i=0; i< tracks.length; i++){ %>
+        <li class=<%= i%2== 0? 'firstBg' : '' %>>
+            <span class="listIndex"><%= i+1<10? ('0'+(i+1)) : i+1 %></span>
+            <i class="iconfont <%= tracks[i].collection ? 'icon-shoucang' : 'icon-xihuan' %>" data-song="<%= tracks[i] %>"></i>
+            <span class="name">
+            <%= tracks[i].name %>
+            </span>
+            <div class="music-list-mid" >
+                    <i class="iconfont icon-bofang" data-songId= <%= tracks[i].id %> data-time= <%= tracks[i].dt %>></i>
+                    <i class="iconfont icon-gengduo2"></i>
+            </div>
+            <span class="singer">
+            <% var ar=tracks[i].ar; for(var j=0;j< ar.length; j++){ %>
+                <%= j % 2 == 1? '/' : '' %> <%= ar[j].name %> 
+            <% } %>
+            </span>
+            <span class="cd"><%= tracks[i].cdName %></span>
+            <span class="time"><%= tracks[i].dt %></span>
+            <i class="iconfont icon-sq sq"></i>
+
+            <% if(tracks[i].mv > 0) {%>
+            <i class="iconfont icon-MV mv" data-id= "<%= tracks[i].mv %>"></i>
+            <% } %>
+        </li>
+    <% } %>
+<% }else { %>
+    <div class="noFind"><p>未能找到与"<span class="value"><%= tracks.value %></span>"有关的信息</p><div>
+<% } %>
